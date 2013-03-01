@@ -1,0 +1,38 @@
+<h1>Page#calender</h1>
+<p>Find me in app/views/page/calender.html.erb</p>
+<br/>
+<heading> My name is<%= @name%></heading>
+<b>Month is --> <%= @month %> and years is --> <%= @year %> </b><br/>
+
+<%= calendar(@month , @year ) %>
+
+<%= @name +"   " + @my_time.to_s %><br/>
+<%= @products %> <br/>
+
+<%= @products1 %> <br/>
+
+<ol>
+	<% @products.each do |product| %>
+		<li> <%= product.upcase %> </li>
+	<% end %>
+
+</ol>
+
+
+<ol>
+	<% @products.each do |product| %>
+		<li> <%= product.titleize %> </li> <!--  or we can use product.capitalize  -->
+	<% end %>
+
+</ol>
+cities  = %w[ London
+              Oslo
+              Paris
+              Amsterdam
+              Berlin ]
+visited = %w[Berlin Oslo]
+ 
+puts "I still need " +
+     "to visit the " +
+     "following cities:",
+     cities - visited
